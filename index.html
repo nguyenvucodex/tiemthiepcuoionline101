@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiệm Thiệp Cưới 101 </title>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Baloo+2:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- HEADER -->
+        <header class="app-header" id="navbar">
+            <div class="container header-inner">
+                <div class="header-left">
+                    <a href="#" class="logo" onclick="event.preventDefault(); document.getElementById('view-gallery').scrollTo({top: 0, behavior: 'smooth'});">
+                        <img src="logo_01.png" alt="Tiệm Thiệp Cưới 101 Logo" style="height: 80px; width: auto;">
+                    </a>
+                </div>
+                
+                <!-- Hamburger Icon -->
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                
+                <div class="header-nav-wrapper" id="header-nav-wrapper">
+                    <nav class="main-nav">
+                        <a href="#" class="active" onclick="event.preventDefault(); document.getElementById('view-gallery').scrollTo({top: 0, behavior: 'smooth'});">Trang chủ</a>
+                        <a href="#how-it-works">Cách hoạt động</a>
+                        <a href="#templates">Kho mẫu</a>
+                        <a href="#pricing">Bảng giá</a>
+                    </nav>
+                    <div class="header-right" id="nav-actions">
+                        <button class="btn-text">Đăng nhập</button>
+                        <button class="btn-primary" onclick="document.getElementById('templates').scrollIntoView()">Tạo thiệp ngay</button>
+                    </div>
+                </div>
+                <!-- Buttons used when inside Editor -->
+                <div class="header-editor-actions hidden" id="editor-actions">
+                    <button id="btn-back-gallery" class="btn-outline"><i class="fa-solid fa-arrow-left"></i> Đổi
+                        mẫu</button>
+                    <button id="btn-publish" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Xuất
+                        bản</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- VIEW 1: TRANG CHỦ (LANDING PAGE) -->
+        <main id="view-gallery" class="view active">
+
+            <!-- HERO SECTION -->
+            <section class="hero">
+                <!-- Background decorative elements -->
+                <div class="hero-bg-blob shape-1"></div>
+                <div class="hero-bg-blob shape-2"></div>
+
+                <div class="container hero-grid">
+                    <div class="hero-text reveal-slide-up">
+                        <div class="badge-pill">
+                            <span class="badge-new">✨ Mới</span> Nền tảng tạo thiệp tự động 2026
+                        </div>
+                        <h1 class="hero-title">
+                            Gửi trọn yêu thương với<br>
+                            <span class="text-gradient">Thiệp Cưới Online <span style="font-size: 2.5rem; animation: float 3s infinite; display: inline-block;">✨</span></span>
+                        </h1>
+                        <p class="hero-desc">
+                            Không cần biết thiết kế, chỉ mất 3 phút để sở hữu ngay một trang web thiệp cưới siêu xinh xắn,
+                            mang đậm dấu ấn cá nhân và tự động quản lý khách mời.
+                        </p>
+                        <div class="hero-cta">
+                            <button class="btn-primary btn-xl shadow-glow"
+                                onclick="document.getElementById('templates').scrollIntoView()">
+                                Bắt đầu miễn phí <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                            <a href="#how-it-works" class="btn-text btn-xl"><i class="fa-solid fa-circle-play"></i> Xem
+                                cách làm</a>
+                        </div>
+                        <div class="trust-indicators">
+                            <div class="avatars">
+                                <img src="https://i.pravatar.cc/100?img=1" alt="User">
+                                <img src="https://i.pravatar.cc/100?img=5" alt="User">
+                                <img src="https://i.pravatar.cc/100?img=9" alt="User">
+                            </div>
+                            <div class="trust-text">
+                                <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i></div>
+                                <span>Hơn <strong>10,000+</strong> cặp đôi đã tin dùng</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual reveal-slide-left">
+                        <div class="floating-phone">
+                            <div class="phone-frame">
+                                <div class="phone-notch-top"></div>
+                                <!-- A visual representation of a wedding invitation inside -->
+                                <div class="phone-content"
+                                    style="background: url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80') center/cover;">
+                                    <div class="phone-content-overlay">
+                                        <div class="mockup-date">20 . 10 . 2026</div>
+                                        <div class="mockup-names">Minh & Lan</div>
+                                        <div class="mockup-btn">Save the date</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Floating decorative cards -->
+                            <div class="float-card card-1"><span style="font-size: 1.2rem;">💖</span> Giao diện cute</div>
+                            <div class="float-card card-2"><span style="font-size: 1.2rem;">🚀</span> 3 phút là xong</div>
+                            <div class="float-card card-3"><span style="font-size: 1.2rem;">💌</span> 100% Miễn phí</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CÁC BƯỚC THỰC HIỆN -->
+            <section id="how-it-works" class="steps-section section-padding bg-gray">
+                <div class="container">
+                    <div class="section-title text-center reveal-fade">
+                        <span class="sub-heading">Cách hoạt động</span>
+                        <h2>Sở hữu thiệp cưới chỉ với 3 bước</h2>
+                    </div>
+
+                    <div class="steps-grid">
+                        <div class="step-card reveal-slide-up" style="transition-delay: 0.1s;">
+                            <div class="step-number">1</div>
+                            <div class="step-icon"><i class="fa-solid fa-palette"></i></div>
+                            <h3>Chọn Mẫu Giao Diện</h3>
+                            <p>Khám phá kho giao diện đa dạng, từ cổ điển đến hiện đại. Chọn mẫu phản ánh đúng cá tính
+                                của hai bạn.</p>
+                        </div>
+                        <div class="step-card reveal-slide-up" style="transition-delay: 0.2s;">
+                            <div class="step-number">2</div>
+                            <div class="step-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+                            <h3>Điền Thông Tin</h3>
+                            <p>Thay đổi tên, ngày giờ, địa điểm và câu chuyện tình yêu của bạn trực tiếp trên trình
+                                duyệt với tính năng xem trước trực tiếp.</p>
+                        </div>
+                        <div class="step-card reveal-slide-up" style="transition-delay: 0.3s;">
+                            <div class="step-number">3</div>
+                            <div class="step-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                            <h3>Chia Sẻ Tức Thì</h3>
+                            <p>Nhận ngay một đường link chuyên nghiệp và QR Code. Gửi hàng loạt cho khách mời chỉ bằng
+                                một cú click.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KHO MẪU (TEMPLATES) -->
+            <section id="templates" class="templates-section section-padding">
+                <div class="container">
+                    <div class="section-title text-center reveal-fade">
+                        <span class="sub-heading">Kho giao diện</span>
+                        <h2>Khám phá mẫu thiệp tuyệt đẹp</h2>
+                        <p class="section-desc">Cập nhật xu hướng thiết kế mới nhất 2026. Mọi mẫu đều tự động tương
+                            thích hoàn hảo trên điện thoại di động.</p>
+                    </div>
+
+                    <div class="template-grid">
+                        <!-- Card 1: Song Hỷ Đỏ -->
+                        <div class="template-card reveal-slide-up" data-template="tpl-songhy">
+                            <div class="tpl-thumb"
+                                style="background: linear-gradient(rgba(140,42,42,0.5), rgba(97,17,17,0.9)), url('thiep cuoi 01/album/a1.jpg') center/cover; position: relative;">
+                                <div class="tpl-tag">Premium</div>
+                                <div class="tpl-preview-text"
+                                    style="color: #F9F2E7; font-family: 'Great Vibes', cursive; font-size: 3rem;">Quốc
+                                    Bảo<br><span style="font-size: 1.5rem;">&</span><br>An Nhi</div>
+                            </div>
+                            <div class="tpl-info">
+                                <div class="tpl-meta">
+                                    <h3>Song Hỷ Đỏ</h3>
+                                    <span>Tone Đỏ Truyền Thống</span>
+                                </div>
+                                <div class="tpl-actions" style="display: flex; gap: 8px; margin-top: 15px;">
+                                    <a href="thiep cuoi 01/index.html" target="_blank" class="btn-outline"
+                                        style="flex: 1; padding: 0.8rem 1rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 8px;">Xem
+                                        trước giao diện</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Hoa Mộc Xanh -->
+                        <div class="template-card reveal-slide-up" data-template="tpl-hoamoc"
+                            style="transition-delay: 0.1s;">
+                            <div class="tpl-thumb"
+                                style="background: linear-gradient(rgba(46,75,49,0.5), rgba(26,46,29,0.9)), url('thiep cuoi 02/album/a1.jpg') center/cover; position: relative;">
+                                <div class="tpl-tag">Premium</div>
+                                <div class="tpl-preview-text"
+                                    style="color: #D4AF37; font-family: 'Playfair Display', serif; font-size: 2.2rem; font-style: italic;">
+                                    Thành Đạt<br><span style="font-size: 1.5rem; color: #fff;">&</span><br>Phương Mai
+                                </div>
+                            </div>
+                            <div class="tpl-info">
+                                <div class="tpl-meta">
+                                    <h3>Hoa Mộc Xanh</h3>
+                                    <span>Tone Xanh Lá Tươi Mát</span>
+                                </div>
+                                <div class="tpl-actions" style="display: flex; gap: 8px; margin-top: 15px;">
+                                    <a href="thiep cuoi 02/index.html" target="_blank" class="btn-outline"
+                                        style="flex: 1; padding: 0.8rem 1rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 8px;">Xem
+                                        trước giao diện</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Hoàng Gia Trầm -->
+                        <div class="template-card reveal-slide-up" data-template="tpl-royal"
+                            style="transition-delay: 0.2s;">
+                            <div class="tpl-thumb"
+                                style="background: linear-gradient(rgba(10,27,66,0.5), rgba(5,13,36,0.9)), url('thiep cuoi 03/album/a1.jpg') center/cover; position: relative;">
+                                <div class="tpl-tag">Luxury</div>
+                                <div class="tpl-preview-text"
+                                    style="color: #d5b882; font-family: 'Cormorant Garamond', serif; font-size: 2.5rem;">
+                                    Thế Bảo<br><span style="font-size: 1.5rem; font-style: italic;">&</span><br>Ngọc Ánh
+                                </div>
+                            </div>
+                            <div class="tpl-info">
+                                <div class="tpl-meta">
+                                    <h3>Hoàng Gia Trầm</h3>
+                                    <span>Tone Xanh Navy & Vàng</span>
+                                </div>
+                                <div class="tpl-actions" style="display: flex; gap: 8px; margin-top: 15px;">
+                                    <a href="thiep cuoi 03/index.html" target="_blank" class="btn-outline"
+                                        style="flex: 1; padding: 0.8rem 1rem; font-size: 0.95rem; font-weight: 600; text-decoration: none; border-radius: 8px;">Xem
+                                        trước giao diện</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ĐÁNH GIÁ TỪ KHÁCH HÀNG (REVIEWS) -->
+            <section id="reviews" class="reviews-section section-padding">
+                <div class="container">
+                    <div class="section-title text-center reveal-fade">
+                        <h2>Đánh giá từ <span
+                                style="color: #D4AF37; font-family: var(--font-serif); font-style: italic;">khách
+                                hàng</span></h2>
+                        <p class="section-desc" style="color: rgba(255,255,255,0.8);">Những lời nhắn thật lòng từ các
+                            cặp đôi đã tin tưởng Tiệm Thiệp Cưới 101 cho ngày trọng đại.</p>
+                    </div>
+
+                    <div class="reviews-grid">
+                        <!-- Review 1 -->
+                        <div class="review-card reveal-slide-up">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="avatar" style="background: #e53e3e;">P</div>
+                                    <div>
+                                        <h4>Phuong Ho</h4>
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-google review-icon" style="color: #4285F4;"></i>
+                            </div>
+                            <p class="review-text">Rất ưng ý, mình đổi 1 chi tiết trên thiệp cưới online mà các bạn ghi
+                                nhận và sửa ngay trong tích tắc. Nhân viên nhiệt tình và rất ghi nhận ý kiến khách hàng.
+                            </p>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="review-card reveal-slide-up" style="transition-delay: 0.1s;">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="avatar" style="background: #805ad5;">T</div>
+                                    <div>
+                                        <h4>Trần Hào</h4>
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-facebook review-icon" style="color: #1877F2;"></i>
+                            </div>
+                            <p class="review-text">Lần đầu mình làm thiệp online nên hơi lo. Nhưng Tiệm Thiệp làm mọi
+                                thứ đơn giản quá! Chọn template xong điền thông tin vào là xong, không cần biết code hay
+                                thiết kế gì cả.</p>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="review-card reveal-slide-up" style="transition-delay: 0.2s;">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <div class="avatar" style="background: #dd6b20;">D</div>
+                                    <div>
+                                        <h4>Duy Đức</h4>
+                                        <div class="stars">
+                                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <i class="fa-brands fa-google review-icon" style="color: #4285F4;"></i>
+                            </div>
+                            <p class="review-text">Mẫu thiệp cưới rất đẹp. Shop tư vấn hỗ trợ nhiệt tình. Mọi người nên
+                                dùng nhé, rất xứng đáng với giá tiền.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRICING SECTION -->
+            <section id="pricing" class="pricing-section section-padding">
+                <div class="container">
+                    <div class="section-title text-center reveal-fade">
+                        <div class="badge-pill" style="margin: 0 auto 1rem;">
+                            <span class="badge-new">🎁 Mới</span> Siêu tiết kiệm
+                        </div>
+                        <h2>Bảng giá <span style="color: #ec4899; font-family: var(--font-serif); font-style: italic;">siêu đáng yêu</span></h2>
+                        <p class="section-desc">Chỉ bằng một ly trà sữa, bạn đã sở hữu ngay chiếc thiệp cưới online xịn xò nhất quả đất! 🧋</p>
+                    </div>
+
+                    <div class="pricing-grid">
+                        <!-- Basic Package -->
+                        <div class="pricing-card reveal-slide-up">
+                            <div class="pricing-header">
+                                <span class="pricing-icon">🍼</span>
+                                <h3>Gói Trà Sữa Thường</h3>
+                                <div class="price">
+                                    <span class="currency">0</span>
+                                    <span class="amount">đ</span>
+                                </div>
+                                <p class="pricing-desc">Đủ dùng cho một đám cưới nhỏ xinh và ấm cúng.</p>
+                            </div>
+                            <div class="pricing-features">
+                                <ul>
+                                    <li><i class="fa-solid fa-check"></i> Sử dụng 5 mẫu thiệp cơ bản</li>
+                                    <li><i class="fa-solid fa-check"></i> Tùy chỉnh tên & ngày giờ</li>
+                                    <li><i class="fa-solid fa-check"></i> Chèn nhạc nền (3 bài mặc định)</li>
+                                    <li class="disabled"><i class="fa-solid fa-xmark"></i> Quản lý khách mời (RSVP)</li>
+                                    <li class="disabled"><i class="fa-solid fa-xmark"></i> Album ảnh không giới hạn</li>
+                                    <li class="disabled"><i class="fa-solid fa-xmark"></i> Bỏ logo Tiệm Thiệp Cưới 101</li>
+                                </ul>
+                            </div>
+                            <button class="btn-outline btn-block">Bắt đầu miễn phí</button>
+                        </div>
+
+                        <!-- Premium Package -->
+                        <div class="pricing-card premium reveal-slide-up" style="transition-delay: 0.2s;">
+                            <div class="popular-badge">Được yêu thích nhất 💖</div>
+                            <div class="pricing-header">
+                                <span class="pricing-icon">🧋</span>
+                                <h3>Trà Sữa Full Topping</h3>
+                                <div class="price">
+                                    <span class="currency">199.000</span>
+                                    <span class="amount">đ</span>
+                                </div>
+                                <p class="pricing-desc">Mọi tính năng xịn nhất, không giới hạn bất cứ điều gì!</p>
+                            </div>
+                            <div class="pricing-features">
+                                <ul>
+                                    <li><i class="fa-solid fa-check"></i> <strong>Sử dụng toàn bộ</strong> kho mẫu VIP</li>
+                                    <li><i class="fa-solid fa-check"></i> Tùy chỉnh màu sắc & font chữ</li>
+                                    <li><i class="fa-solid fa-check"></i> Chèn nhạc nền MP3 tùy thích</li>
+                                    <li><i class="fa-solid fa-check"></i> Hệ thống xác nhận tham dự (RSVP)</li>
+                                    <li><i class="fa-solid fa-check"></i> Album ảnh HD lên đến 100 tấm</li>
+                                    <li><i class="fa-solid fa-check"></i> Xóa logo bản quyền</li>
+                                </ul>
+                            </div>
+                            <button class="btn-primary btn-block shadow-glow">Mua ngay hôm nay</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ SECTION -->
+            <section id="faq" class="faq-section section-padding">
+                <div class="container" style="max-width: 800px;">
+                    <div class="section-title text-center reveal-fade">
+                        <h2>Câu hỏi thường gặp về <span
+                                style="color: var(--primary); font-family: var(--font-serif); font-style: italic;">thiệp
+                                cưới online</span></h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <div class="faq-item open reveal-slide-up">
+                            <button class="faq-question">
+                                Thiệp cưới online là gì?
+                                <i class="fa-solid fa-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer" style="max-height: 500px;">
+                                <div class="faq-answer-inner">
+                                    <p>Thiệp cưới online là một trang web riêng biệt và hiện đại, giúp các cặp đôi tự
+                                        tạo thiệp cưới online một cách độc đáo. Đây không chỉ là một lời mời cưới đơn
+                                        thuần thay thế thiệp giấy, mà còn là một không gian kỷ niệm kỹ thuật số của
+                                        riêng bạn.</p>
+                                    <p style="margin-top: 10px;">Với thiệp cưới online từ <strong>Tiệm Thiệp Cưới
+                                            101</strong>, bạn có thể:</p>
+                                    <ul>
+                                        <li>Gửi lời chúc mừng, nhận tiền mừng qua QR code, và quản lý khách mời thông
+                                            minh.</li>
+                                        <li>Mời bạn bè, người thân ở khắp mọi nơi một cách tiện lợi và sành điệu.</li>
+                                        <li>Lưu trữ mãi mãi những khoảnh khắc, album ảnh và câu chuyện tình yêu của hai
+                                            bạn.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item reveal-slide-up" style="transition-delay: 0.1s;">
+                            <button class="faq-question">
+                                Làm thế nào để tạo thiệp cưới online?
+                                <i class="fa-solid fa-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Chỉ với 3 bước đơn giản: Chọn mẫu thiệp bạn ưng ý nhất trong kho giao diện, điền
+                                        thông tin lễ cưới (tên, ngày giờ, địa điểm) vào hệ thống, và sau đó xem trước
+                                        mẫu. Hệ thống sẽ tự động tạo ra một trang web thiệp cưới hoàn chỉnh chỉ trong
+                                        vài phút.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item reveal-slide-up" style="transition-delay: 0.2s;">
+                            <button class="faq-question">
+                                Chi phí tạo thiệp cưới online là bao nhiêu?
+                                <i class="fa-solid fa-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Tiệm Thiệp Cưới 101 cung cấp dịch vụ tạo thiệp cưới online siêu tiện lợi với mức
+                                        giá phải chăng, chỉ bằng một cốc trà sữa nhưng mang lại trải nghiệm tuyệt vời và
+                                        đáng nhớ cho ngày vui của bạn.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item reveal-slide-up" style="transition-delay: 0.3s;">
+                            <button class="faq-question">
+                                Tôi có cần kiến thức lập trình hay thiết kế không?
+                                <i class="fa-solid fa-chevron-down faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    <p>Hoàn toàn không! Nền tảng của chúng tôi được thiết kế cực kỳ trực quan và thân
+                                        thiện. Bạn chỉ cần nhập chữ như đang điền một biểu mẫu bình thường, hệ thống sẽ
+                                        tự động sắp xếp và thiết kế mọi thứ cho bạn một cách hoàn hảo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SUPPORT BANNER -->
+            <section id="support" class="support-section section-padding">
+                <div class="container" style="max-width: 900px;">
+                    <div class="section-title text-center reveal-fade">
+                        <h2>Khi bạn cần, <span
+                                style="color: #D4AF37; font-family: var(--font-serif); font-style: italic;">chúng mình
+                                luôn có mặt</span></h2>
+                        <p class="section-desc" style="color: rgba(255,255,255,0.8);">Tiệm Thiệp Cưới 101 luôn sẵn sàng
+                            hỗ trợ 24/7. Nhắn cho chúng mình bất cứ khi nào bạn cần.</p>
+                    </div>
+
+                    <div class="support-banner reveal-slide-up">
+                        <div class="support-item">
+                            <div class="support-icon" style="background: rgba(236, 72, 153, 0.15); color: #ec4899;">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div class="support-text">
+                                <span class="support-label">Thời gian phản hồi</span>
+                                <h3 class="support-value">Dưới 1 phút</h3>
+                            </div>
+                        </div>
+
+                        <div class="support-divider"></div>
+
+                        <div class="support-item">
+                            <div class="support-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <div class="support-text">
+                                <span class="support-label">Hỗ trợ chỉnh sửa</span>
+                                <h3 class="support-value">Đến khi hài lòng</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="app-footer">
+                <div class="container">
+                    <div class="footer-grid">
+                        <div class="footer-col">
+                            <a href="#" class="logo"><img src="logo_01.png" alt="Tiệm Thiệp Cưới 101 Logo"
+                                    style="height: 100px; width: auto;"></a>
+                            <p class="footer-desc">Nền tảng tạo thiệp cưới thông minh, giúp hàng vạn cặp đôi lưu giữ
+                                khoảnh khắc hạnh phúc một cách trọn vẹn nhất.</p>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Liên kết</h4>
+                            <a href="#">Trang chủ</a>
+                            <a href="#how-it-works">Cách hoạt động</a>
+                            <a href="#templates">Kho mẫu</a>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Hỗ trợ</h4>
+                            <a href="#">Trung tâm trợ giúp</a>
+                            <a href="#">Câu hỏi thường gặp</a>
+                            <a href="#">Bảo mật thông tin</a>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2026 Tiệm Thiệp Cưới 101.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </main>
+
+        <!-- VIEW 2: TRÌNH SOẠN THẢO (EDITOR WORKSPACE) -->
+        <main id="view-editor" class="view">
+            <div class="editor-layout">
+                <!-- BÊN TRÁI: LIVE PREVIEW BẰNG MOCKUP ĐIỆN THOẠI -->
+                <div class="preview-area">
+                    <div class="phone-wrapper">
+                        <!-- Mockup Frame -->
+                        <div class="phone-mockup">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen" id="live-preview-screen">
+                                <div class="preview-inner" id="preview-inner">
+                                    <div class="wedding-icon"><i class="fa-solid fa-heart"></i></div>
+                                    <h1 class="p-names">
+                                        <span id="p-bride">Cô Dâu</span>
+                                        <br><span class="p-amp">&</span><br>
+                                        <span id="p-groom">Chú Rể</span>
+                                    </h1>
+                                    <p class="p-invite-text">Trân trọng kính mời tới dự bữa tiệc chung vui cùng gia đình
+                                        chúng tôi tại:</p>
+                                    <div class="p-location" id="p-location">Trung tâm tiệc cưới</div>
+                                    <div class="p-date-time">
+                                        <span id="p-time">17:30</span> | <span id="p-date">20/10/2026</span>
+                                    </div>
+                                    <div class="p-address" id="p-address">123 Đường Tình Yêu, Thành phố Hạnh Phúc</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BÊN PHẢI: THANH CÔNG CỤ (SIDEBAR FORM) -->
+                <div class="sidebar-form">
+                    <div class="sidebar-header">
+                        <h3>Thiết kế thiệp</h3>
+                    </div>
+                    <form id="editor-form">
+                        <input type="hidden" id="selected-template" name="template" value="">
+
+                        <!-- Accordion 1 -->
+                        <div class="accordion-item active">
+                            <button type="button" class="accordion-header">
+                                <span><i class="fa-solid fa-user-group"></i> Thông tin Cô Dâu - Chú Rể</span>
+                                <i class="fa-solid fa-chevron-down acc-icon"></i>
+                            </button>
+                            <div class="accordion-body">
+                                <div class="form-group">
+                                    <label>Tên Cô Dâu</label>
+                                    <input type="text" id="in-bride" name="bride" placeholder="VD: Ngọc Lan">
+                                </div>
+                                <div class="form-group">
+                                    <label>Tên Chú Rể</label>
+                                    <input type="text" id="in-groom" name="groom" placeholder="VD: Quang Minh">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Accordion 2 -->
+                        <div class="accordion-item">
+                            <button type="button" class="accordion-header">
+                                <span><i class="fa-solid fa-calendar-check"></i> Thời gian & Địa điểm</span>
+                                <i class="fa-solid fa-chevron-down acc-icon"></i>
+                            </button>
+                            <div class="accordion-body">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Ngày cưới</label>
+                                        <input type="date" id="in-date" name="date">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Thời gian đón khách</label>
+                                        <input type="time" id="in-time" name="time">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tên Nhà Hàng</label>
+                                    <input type="text" id="in-location" name="location" placeholder="VD: Grand Palace">
+                                </div>
+                                <div class="form-group">
+                                    <label>Địa chỉ</label>
+                                    <textarea id="in-address" name="address" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- MODAL HIỂN THỊ LINK KẾT QUẢ -->
+    <div id="result-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal"><i class="fa-solid fa-xmark"></i></span>
+            <div class="modal-header text-center">
+                <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+                <h2>Tuyệt vời! Thiệp đã sẵn sàng</h2>
+                <p>Sao chép đường link bên dưới để gửi cho bạn bè ngay lập tức.</p>
+            </div>
+
+            <div class="link-box">
+                <input type="text" id="generated-link" readonly>
+                <button id="copy-btn" class="btn-primary" title="Sao chép link">
+                    Sao chép
+                </button>
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-outline" style="width: 100%; margin-top: 15px;">
+                    <i class="fa-solid fa-users"></i> Quản Lý Khách Mời (Nhập Tên Hàng Loạt)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
