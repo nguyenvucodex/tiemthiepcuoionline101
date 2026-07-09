@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thế Bảo & Ngọc Ánh - Thiệp Cưới</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+    <div class="welcome-screen" id="welcomeScreen">
+        <!-- Ngôi sao nền mờ bên ngoài -->
+        <div class="bg-stars">
+            <div class="star s1">✦</div>
+            <div class="star s2">✦</div>
+            <div class="star s3">✦</div>
+            <div class="star s4">✦</div>
+            <div class="star s5">✦</div>
+            <div class="star s6">✦</div>
+        </div>
+
+        <div class="invitation-card">
+            <!-- Hình nền hoa văn chìm -->
+            <div class="floral-bg"></div>
+
+            <div class="card-content">
+                <!-- Icon trái tim vàng -->
+                <div class="heart-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="heart-icon">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                </div>
+                
+                <h1 class="names">
+                    <div class="name">Thế Bảo</div>
+                    <div class="ampersand">&</div>
+                    <div class="name">Ngọc Ánh</div>
+                </h1>
+                
+                <!-- Dấu gạch hoa văn -->
+                <div class="divider">
+                    <div class="line"></div>
+                    <div class="flourish">❦</div>
+                    <div class="line"></div>
+                </div>
+                
+                <p class="date">21 tháng 6, 2026</p>
+                <p class="invite-text">Thân Mời</p>
+                
+                <div class="guest-name-box">
+                    <span>Quý Khách</span>
+                </div>
+
+                <p class="invite-message">Đến dự buổi tiệc chung vui cùng chúng mình</p>
+                
+                <button class="open-btn" id="openBtn">Mở thiệp</button>
+            </div>
+        </div>
+    </div>
+    
+    <main class="main-content" id="mainContent" style="display: none;">
+        <!-- Top floral decoration (Đưa ra ngoài thẻ có animation để mix-blend-mode hoạt động) -->
+        <div class="hero-floral-top"></div>
+        
+        <!-- SECTION 1: THE WEDDING OF -->
+        <section class="hero-section">
+            
+            <div class="hero-content reveal">
+                <p class="pre-title">THE WEDDING OF</p>
+                
+                <h2 class="hero-names">
+                    <span class="name">Thế Bảo</span>
+                    <span class="ampersand">&</span>
+                    <span class="name">Ngọc Ánh</span>
+                </h2>
+            </div>
+        </section>
+            
+        <!-- Khung viền liền mạch bao bọc toàn bộ nội dung bên dưới -->
+        <div class="content-frame-wrapper">
+                
+                <!-- 4 Góc viền hoa văn (Sử dụng ảnh có sẵn của user) -->
+                <div class="frame-corner corner-tl"></div>
+                <div class="frame-corner corner-tr"></div>
+
+                <!-- Viền ngang trên -->
+                <div class="frame-line line-top"></div>
+                
+                <!-- Viền dọc 2 bên (Trải dài xuống tận cùng) -->
+                <div class="frame-line line-left"></div>
+                <div class="frame-line line-right"></div>
+
+                <div class="frame-content">
+                    <!-- THÔNG TIN LỄ CƯỚI -->
+                    <section class="section event-info-section reveal">
+                        <h2 class="section-title">THÔNG TIN LỄ CƯỚI</h2>
+                        
+                        <div class="parents-grid">
+                            <div class="parents-col">
+                                <span class="role-text">Ông Bà</span>
+                                <p class="parent-name">Nguyễn Văn Hùng</p>
+                                <p class="parent-name">Lê Thị Thu</p>
+                                <p class="address-text">45 Phố Huế, Hai Bà Trưng, Hà Nội</p>
+                            </div>
+                            <div class="parents-col">
+                                <span class="role-text">Ông Bà</span>
+                                <p class="parent-name">Trần Văn Long</p>
+                                <p class="parent-name">Phạm Thị Hoa</p>
+                                <p class="address-text">12 Nguyễn Trãi, Thanh Xuân, Hà Nội</p>
+                            </div>
+                        </div>
+                        
+                        <div class="couple-names-formal">
+                            <div class="person">
+                                <h3 class="formal-name">Thế Bảo</h3>
+                                <span class="role-badge">Út Nam</span>
+                            </div>
+                            <div class="ampersand">&</div>
+                            <div class="person">
+                                <h3 class="formal-name">Ngọc Ánh</h3>
+                                <span class="role-badge">Trưởng Nữ</span>
+                            </div>
+                        </div>
+                        
+                        <div class="event-details">
+                            <p class="event-line">LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI</p>
+                            <p class="event-highlight">TƯ GIA</p>
+                            <p class="event-line">VÀO LÚC</p>
+                            <p class="event-time">09:00</p>
+                            
+                            <div class="event-date-box">
+                                <span class="day-of-week">CHỦ NHẬT</span>
+                                <span class="date-sep">|</span>
+                                <span class="big-day">21</span>
+                                <span class="date-sep">|</span>
+                                <span class="month">THÁNG 06</span>
+                            </div>
+                            <p class="event-year">2026</p>
+                            <p class="lunar-date">(TỨC NGÀY 07/05 NĂM BÍNH NGỌ)</p>
+                        </div>
+                    </section>
+                    
+                    <!-- ALBUM ẢNH CƯỚI -->
+                    <section class="section album-section">
+                        <h2 class="section-title reveal">ALBUM ẢNH CƯỚI</h2>
+                        
+                        <div class="photo-grid reveal delay-100">
+                            <div class="photo-item"><img src="album/a1.jpg" alt="Album 1"></div>
+                            <div class="photo-item"><img src="album/a2.jpg" alt="Album 2"></div>
+                            <div class="photo-item"><img src="album/a3.jpg" alt="Album 3"></div>
+                            <div class="photo-item more-photos">
+                                <img src="album/a4.jpg" alt="Album 4">
+                                <div class="overlay"><span>+5</span></div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- THÔNG TIN TIỆC CƯỚI -->
+                    <section class="section event-info-section reveal" style="margin-top: 80px;">
+                        <h2 class="section-title">THÔNG TIN TIỆC CƯỚI</h2>
+                        
+                        <div class="event-details">
+                            <p class="event-highlight" style="font-size: 1.8rem;">TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:</p>
+                            <div class="event-time">18:00</div>
+                            <div class="event-date-box">
+                                <span class="day-of-week">CHỦ NHẬT</span>
+                                <span class="date-sep">|</span>
+                                <span class="big-day">21</span>
+                                <span class="date-sep">|</span>
+                                <span class="month">THÁNG 06</span>
+                            </div>
+                            <div class="event-year">2026</div>
+                            <div class="lunar-date">(TỨC NGÀY 07/05 NĂM BÍNH NGỌ)</div>
+                        </div>
+
+                        <!-- Lịch trình -->
+                        <div class="schedule-box">
+                            <div class="schedule-item">
+                                <div class="schedule-title">ĐÓN KHÁCH</div>
+                                <div class="schedule-time">17:30</div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-title">KHAI TIỆC</div>
+                                <div class="schedule-time">18:00</div>
+                            </div>
+                        </div>
+
+                        <!-- Lịch -->
+                        <div class="calendar-box">
+                            <div class="calendar-header">Tháng 6 / 2026</div>
+                            <table class="calendar-table">
+                                <thead>
+                                    <tr>
+                                        <th>T2</th><th>T3</th><th>T4</th><th>T5</th><th>T6</th><th>T7</th><th>CN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+                                        <td class="highlight-day">
+                                            <div class="day-wrapper">
+                                                <span class="heart-icon">♡</span>
+                                                <span class="day-num">21</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td><td>30</td><td></td><td></td><td></td><td></td><td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Viền ngang dưới -->
+                <div class="frame-corner corner-bl"></div>
+                <div class="frame-corner corner-br"></div>
+                <div class="frame-line line-bottom"></div>
+            </div>
+            
+            <!-- BẢN ĐỒ -->
+            <section class="section map-section reveal">
+                <h2 class="section-title">TIỆC CƯỚI SẼ TỔ CHỨC TẠI</h2>
+                <p class="map-address">VinPalace Cổ Loa, Đông Hội, Đông Anh, Hà Nội</p>
+                
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=VinPalace+C%E1%BB%95+Loa,+%C4%90%C3%B4ng+H%E1%BB%99i,+%C4%90%C3%B4ng+Anh,+H%C3%A0+N%E1%BB%99i&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+
+            <!-- TIMELINE -->
+            <section class="section timeline-section">
+                <h2 class="section-title reveal">LỊCH TRÌNH NGÀY CƯỚI</h2>
+                
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item reveal">
+                        <div class="timeline-time">17:30</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">Đón khách</div>
+                    </div>
+                    
+                    <div class="timeline-item reveal delay-100">
+                        <div class="timeline-time">18:30</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">Khai tiệc</div>
+                    </div>
+                    
+                    <div class="timeline-item reveal delay-200">
+                        <div class="timeline-time">18:45</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">Rót rượu, cắt bánh</div>
+                    </div>
+                    
+                    <div class="timeline-item reveal delay-300">
+                        <div class="timeline-time">19:00</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">Phục vụ món chính</div>
+                    </div>
+                    
+                    <div class="timeline-item reveal delay-100">
+                        <div class="timeline-time">21:00</div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">Kết thúc tiệc</div>
+                    </div>
+                </div>
+            </section>
+            <!-- PHONG BAO MỪNG CƯỚI -->
+            <section class="section gift-section reveal">
+                <h2 class="section-title">PHONG BAO MỪNG CƯỚI</h2>
+                
+                <div class="envelope-container">
+                    <div class="css-envelope">
+                        <!-- Đồng xu bay xung quanh -->
+                        <div class="coin coin-1"><span></span></div>
+                        <div class="coin coin-2"><span></span></div>
+                        <div class="coin coin-3"><span></span></div>
+                        <div class="coin coin-4"><span></span></div>
+                        <div class="coin coin-5"><span></span></div>
+                        
+                        <!-- Thân lì xì -->
+                        <div class="envelope-body" id="envelopeBtn">
+                            <div class="env-border">
+                                <div class="env-corner tl"></div>
+                                <div class="env-corner tr"></div>
+                                <div class="env-corner bl"></div>
+                                <div class="env-corner br"></div>
+                            </div>
+                            <div class="env-center-circle">囍</div>
+                        </div>
+                    </div>
+                    <div class="click-to-open">Nhấn để mở</div>
+                </div>
+                
+                <p class="thank-you-text">Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!</p>
+            </section>
+    </main>
+
+    <!-- MODAL QR LÌ XÌ -->
+    <div id="qr-modal" class="modal">
+        <div class="modal-content qr-modal-content">
+            <span class="close-modal" id="closeQrModal">&times;</span>
+            <h3 class="qr-title">MÃ QR MỪNG CƯỚI</h3>
+            <div class="qr-grid">
+                <div class="qr-box">
+                    <h4 class="qr-role">Đến Chú Rể</h4>
+                    <img src="album/a7.jpg" alt="QR Chú Rể" class="qr-img">
+                    <p class="qr-name">Tên Chú Rể</p>
+                    <p class="qr-bank">Ngân hàng - Số Tài Khoản</p>
+                </div>
+                <div class="qr-box">
+                    <h4 class="qr-role">Đến Cô Dâu</h4>
+                    <img src="album/a7.jpg" alt="QR Cô Dâu" class="qr-img">
+                    <p class="qr-name">Tên Cô Dâu</p>
+                    <p class="qr-bank">Ngân hàng - Số Tài Khoản</p>
+                </div>
+            </div>
+            <p class="qr-thank-you">Gia đình xin chân thành cảm ơn tình cảm của quý khách!</p>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX ALBUM -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" id="closeLightbox">&times;</span>
+        <div class="lightbox-content">
+            <button class="nav-btn prev-btn" id="prevPhoto">&#10094;</button>
+            <img src="" alt="Phóng to" id="lightboxImg">
+            <button class="nav-btn next-btn" id="nextPhoto">&#10095;</button>
+            <div class="lightbox-caption" id="lightboxCaption">1 / 7</div>
+        </div>
+    </div>
+
+    <!-- AUDIO PLAYER -->
+    <audio id="bgMusic" loop>
+        <source src="mp3/beautiful-in-white-official-video.mp3" type="audio/mpeg">
+    </audio>
+    <div class="music-control" id="musicControl">
+        <svg viewBox="0 0 24 24" class="music-icon" id="musicIcon">
+            <path fill="currentColor" d="M21 3H12v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h7V3z"/>
+        </svg>
+    </div>
+
+    <script src="script.js?v=6"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đình Phong & Mộc Miên - Thiệp Cưới</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+    <div class="welcome-screen" id="welcomeScreen">
+        <!-- Hiệu ứng lá rơi -->
+        <div class="falling-leaves" id="fallingLeaves"></div>
+
+        <!-- Khung thiệp -->
+        <div class="invitation-card">
+            <!-- Hoa trang trí -->
+            <div class="floral floral-top-left"></div>
+            <div class="floral floral-bottom-right"></div>
+            
+            <div class="card-content">
+                <div class="heart-badge">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                
+                <h1 class="names">
+                    <div class="name">Đình Phong</div>
+                    <div class="ampersand">&</div>
+                    <div class="name">Mộc Miên</div>
+                </h1>
+                
+                <div class="divider">
+                    <svg width="60" height="12" viewBox="0 0 60 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 6H25" stroke="#3d4b2e" stroke-width="0.5"/>
+                        <path d="M35 6H60" stroke="#3d4b2e" stroke-width="0.5"/>
+                        <circle cx="30" cy="6" r="2.5" fill="#3d4b2e"/>
+                        <path d="M28 4L32 4M28 8L32 8" stroke="#3d4b2e" stroke-width="0.5"/>
+                    </svg>
+                </div>
+                
+                <p class="date">24 tháng 5, 2026</p>
+                <p class="invite-text">Thân Mời</p>
+                
+                <button class="open-btn" id="openBtn">Mở thiệp</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="mainContent">
+        <!-- Background Florals for Main Content -->
+        <div class="main-floral main-floral-left"></div>
+        <div class="main-floral main-floral-right"></div>
+        
+        <div class="container">
+            <!-- SECTION: THÔNG TIN GIA ĐÌNH -->
+            <section class="family-section scroll-reveal">
+                
+                <div class="couple-wrapper" style="position: relative; display: flex; flex-direction: column; align-items: center; width: 100%; gap: 4rem;">
+                    <!-- Groom area -->
+                    <div class="person-area groom-area">
+                        <div class="frame-wrapper groom-frame">
+                            <img src="images/a1.jpg" alt="Đình Phong">
+                        </div>
+                        <div class="person-info groom-info">
+                            <span class="role">Trưởng Nam</span>
+                            <h2 class="person-name">Đình Phong</h2>
+                        </div>
+                    </div>
+                    
+                    <!-- Dark Green Band -->
+                    <div class="green-band"></div>
+                    
+                    <!-- Bride area -->
+                    <div class="person-area bride-area">
+                        <div class="person-info bride-info">
+                            <span class="role">Út Nữ</span>
+                            <h2 class="person-name">Mộc Miên</h2>
+                        </div>
+                        <div class="frame-wrapper bride-frame">
+                            <img src="images/a1.jpg" alt="Mộc Miên">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Parents Info below portraits -->
+                <div class="parents-info-container">
+                    <div class="parents-col">
+                        <p class="parent-name">Ông: Trần Văn Hùng</p>
+                        <p class="parent-name">Bà: Phạm Thị Lan</p>
+                        <p class="parent-address">25 Ngõ 12 Đặng Văn Ngữ<br>Đống Đa, Hà Nội</p>
+                    </div>
+                    <div class="parents-col">
+                        <p class="parent-name">Ông: Nguyễn Văn Bình</p>
+                        <p class="parent-name">Bà: Phan Thị Hương</p>
+                        <p class="parent-address">18 Ngõ 86 Chùa Hà<br>Cầu Giấy, Hà Nội</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: THÔNG TIN TIỆC CƯỚI & LỊCH -->
+            <section class="section event-section scroll-reveal">
+                <h2 class="section-title">THÔNG TIN TIỆC CƯỚI</h2>
+                <div class="event-time">
+                    <p>CHỦ NHẬT <span class="sep">|</span> <span class="big-date">24</span> <span class="sep">|</span> THÁNG 05</p>
+                    <p class="year">2026</p>
+                    <p class="lunar-date">(TỨC NGÀY 08/04 NĂM BÍNH NGỌ)</p>
+                </div>
+                
+                <div class="time-blocks">
+                    <div class="time-block">
+                        <p class="label">ĐÓN KHÁCH</p>
+                        <p class="time">17:30</p>
+                    </div>
+                    <div class="time-block">
+                        <p class="label">KHAI TIỆC</p>
+                        <p class="time">18:00</p>
+                    </div>
+                </div>
+                
+                <!-- Calendar Widget -->
+                <div class="calendar-widget">
+                    <div class="cal-header">Tháng 5 / 2026</div>
+                    <div class="cal-grid">
+                        <div class="day-name">T2</div><div class="day-name">T3</div><div class="day-name">T4</div><div class="day-name">T5</div><div class="day-name">T6</div><div class="day-name">T7</div><div class="day-name">CN</div>
+                        
+                        <div class="empty"></div><div class="empty"></div><div class="empty"></div><div class="empty"></div>
+                        <div class="date">1</div><div class="date">2</div><div class="date">3</div>
+                        <div class="date">4</div><div class="date">5</div><div class="date">6</div><div class="date">7</div><div class="date">8</div><div class="date">9</div><div class="date">10</div>
+                        <div class="date">11</div><div class="date">12</div><div class="date">13</div><div class="date">14</div><div class="date">15</div><div class="date">16</div><div class="date">17</div>
+                        <div class="date">18</div><div class="date">19</div><div class="date">20</div><div class="date">21</div><div class="date">22</div><div class="date">23</div>
+                        <div class="date highlight"><i class="fa-solid fa-heart"></i><span>24</span></div>
+                        <div class="date">25</div><div class="date">26</div><div class="date">27</div><div class="date">28</div><div class="date">29</div><div class="date">30</div><div class="date">31</div>
+                    </div>
+                </div>
+                
+                <a href="#" class="add-to-calendar">Thêm vào lịch</a>
+                
+                <button class="rsvp-btn">XÁC NHẬN</button>
+                
+                <div class="location-info">
+                    <h2 class="section-title">TIỆC CƯỚI SẼ TỔ CHỨC TẠI</h2>
+                    <p class="location-name">Tiệc Cưới Hoàng Gia, Ngõ 74 P. Nguyễn Thị Định, Nhân Chính, Thanh Xuân, Hà Nội</p>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.636025178129!2d105.7981503148831!3d21.00722108601007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aca6c6df926f%3A0x6b402e1c3e387c3e!2sTrung%20T%C3%A2m%20S%E1%BB%B1%20Ki%E1%BB%87n%20V%C3%A0%20Ti%E1%BB%87c%20C%C6%B0%E1%BB%9Bi%20Ho%C3%A0ng%20Gia%202!5e0!3m2!1svi!2s!4v1655182181755!5m2!1svi!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: ALBUM ẢNH -->
+            <section class="section gallery-section scroll-reveal">
+                <h2 class="section-title">ALBUM HÌNH CƯỚI</h2>
+                <!-- Swiper 3D Carousel -->
+                <div class="swiper album-swiper">
+                    <div class="swiper-wrapper" id="albumWrapper">
+                        <div class="swiper-slide"><img src="album/a1.jpg" alt="Hình cưới 1"></div>
+                        <div class="swiper-slide"><img src="album/a2.jpg" alt="Hình cưới 2"></div>
+                        <div class="swiper-slide"><img src="album/a3.jpg" alt="Hình cưới 3"></div>
+                        <div class="swiper-slide"><img src="album/a4.jpg" alt="Hình cưới 4"></div>
+                        <div class="swiper-slide"><img src="album/a5.jpg" alt="Hình cưới 5"></div>
+                        <div class="swiper-slide"><img src="album/a6.jpg" alt="Hình cưới 6"></div>
+                        <div class="swiper-slide"><img src="album/a7.jpg" alt="Hình cưới 7"></div>
+                    </div>
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Fraction Pagination (e.g., 1 / 7) -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- SECTION: LỊCH TRÌNH -->
+            <section class="section timeline-section scroll-reveal">
+                <h2 class="section-title">SỰ KIỆN CHÍNH</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time">17:30</div>
+                        <div class="marker"><i class="fa-solid fa-heart"></i></div>
+                        <div class="content">
+                            <h4>Đón khách</h4>
+                            <p>Cùng nhau chụp hình lưu niệm</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">18:00</div>
+                        <div class="marker"><i class="fa-solid fa-heart"></i></div>
+                        <div class="content">
+                            <h4>Làm lễ</h4>
+                            <p>Cô dâu và chú rể chính thức trao lời thề nguyện</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">18:30</div>
+                        <div class="marker"><i class="fa-solid fa-heart"></i></div>
+                        <div class="content">
+                            <h4>Khai tiệc</h4>
+                            <p>Thưởng thức thực đơn chuẩn bị sẵn</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">21:00</div>
+                        <div class="marker"><i class="fa-solid fa-heart"></i></div>
+                        <div class="content">
+                            <h4>Kết thúc</h4>
+                            <p>Cảm ơn mọi người đã đến chung vui</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION: SỔ LƯU BÚT -->
+            <section class="section guestbook-section scroll-reveal">
+                <h2 class="section-title">SỔ LƯU BÚT</h2>
+                <p class="guestbook-desc">Cảm ơn bạn đã đến chung vui cùng chúng tôi. Hãy để lại một lời chúc tốt đẹp nhất nhé!</p>
+                <form class="guestbook-form" id="guestbookForm">
+                    <input type="text" placeholder="Tên của bạn *" required>
+                    <textarea placeholder="Lời chúc của bạn *" rows="4" required></textarea>
+                    <button type="button" class="ai-gen-btn"><i class="fa-solid fa-wand-magic-sparkles"></i> AI Gợi ý lời chúc</button>
+                    <button type="submit" class="submit-btn">Gửi lời chúc</button>
+                </form>
+            </section>
+
+            <!-- SECTION: QUÀ TẶNG (PHONG BAO) -->
+            <section class="section gift-section scroll-reveal" style="text-align: center;">
+                <h2 class="section-title">PHONG BAO MỪNG CƯỚI</h2>
+                
+                <div class="red-envelope-container" id="openGiftPopup">
+                    <!-- Floating coins -->
+                    <div class="css-coin c1"></div>
+                    <div class="css-coin c2"></div>
+                    <div class="css-coin c3"></div>
+                    <div class="css-coin c4"></div>
+                    <div class="css-coin c5"></div>
+                    
+                    <div class="red-envelope">
+                        <div class="env-corner tl"></div>
+                        <div class="env-corner tr"></div>
+                        <div class="env-corner bl"></div>
+                        <div class="env-corner br"></div>
+                        <div class="double-happiness">囍</div>
+                    </div>
+                </div>
+                
+                <p class="click-to-open">Nhấn để mở</p>
+                
+                <p class="thank-you-msg">Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!</p>
+                <p class="watermark">♡ Đình Phong & Mộc Miên</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Popup Gift -->
+    <div class="gift-popup" id="giftPopup">
+        <div class="popup-content">
+            <button class="close-popup" id="closeGiftPopup"><i class="fa-solid fa-xmark"></i></button>
+            <h2 class="section-title">HỘP QUÀ MỪNG</h2>
+            <div class="qr-container">
+                <div class="qr-card">
+                    <h3>Chú Rể</h3>
+                    <img src="images/a1.jpg" alt="QR Chú Rể" class="qr-img">
+                    <p>Ngân hàng: Vietcombank<br>STK: 0123456789<br>HOÀNG ĐÌNH PHONG</p>
+                </div>
+                <div class="qr-card">
+                    <h3>Cô Dâu</h3>
+                    <img src="images/a1.jpg" alt="QR Cô Dâu" class="qr-img">
+                    <p>Ngân hàng: Techcombank<br>STK: 9876543210<br>TRẦN MỘC MIÊN</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Player -->
+    <audio id="bgMusic" loop>
+        <source src="mp3/beautiful-in-white-official-video.mp3" type="audio/mpeg">
+    </audio>
+    <button id="musicToggle" class="music-toggle playing">
+        <i class="fa-solid fa-music"></i>
+    </button>
+
+    <!-- Fullscreen Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-header">
+            <span class="lightbox-counter" id="lightboxCounter">1 / 7</span>
+            <button class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <button class="lightbox-nav prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Phóng to">
+        </div>
+        <button class="lightbox-nav next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></button>
+        
+        <div class="lightbox-thumbnails" id="lightboxThumbnails">
+            <!-- Rendered via JS -->
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
