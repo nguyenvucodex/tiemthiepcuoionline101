@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Cưới Cute</title>
+    <!-- SEO & Meta tags -->
+    <meta name="description" content="Thiệp mời đám cưới của Hữu Trí và Thiên Ý. Trân trọng kính mời!">
+    <meta property="og:title" content="Thiệp Cưới - Hữu Trí & Thiên Ý">
+    <meta property="og:description" content="Trân trọng kính mời quý khách đến dự lễ thành hôn của chúng tôi.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts cho typography sang trọng -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Thư viện Swiper.js cho hiệu ứng lướt ảnh 3D -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- Màn hình mở đầu (Splash Screen) -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="floating-bg"></div> <!-- Hiệu ứng chữ hỷ bay lơ lửng -->
+
+        <div class="splash-card">
+            <div class="decor-top-right">
+                <img src="decor/trai_tim1.png" alt="decor">
+            </div>
+
+            <div class="hi-icon">
+                <img src="decor/chu_hi.png" alt="Chữ Hỷ">
+            </div>
+
+            <h1 class="couple-name">
+                Trường Vũ <br>
+                <span class="ampersand">&</span> <br>
+                Mỹ Nhân
+            </h1>
+
+            <div class="divider">
+                <img src="decor/trai_tim3.png" alt="divider" style="width: 16px;">
+            </div>
+
+            <p class="date">2 tháng 8, 2026</p>
+            <p class="invite-text">Thân Mời</p>
+
+            <button id="open-btn" class="open-btn">Mở thiệp</button>
+
+            <div class="decor-bottom-left">
+                <img src="decor/trai_tim2.png" alt="decor">
+            </div>
+        </div>
+    </div>
+
+    <!-- Nội dung chính của thiệp (Sẽ thêm ở các bước sau) -->
+    <div id="main-content" class="main-content hidden">
+        <section class="hero-section">
+            <!-- Thêm phụ kiện trái tim lơ lửng cho đỡ trống -->
+            <img src="decor/trai_tim3.png" class="floating-decor decor-1" alt="decor">
+            <img src="decor/trai_tim2.png" class="floating-decor decor-2" alt="decor">
+            <img src="decor/trai_tim1.png" class="floating-decor decor-3" alt="decor">
+            <img src="decor/trai_tim3.png" class="floating-decor decor-4" alt="decor">
+
+            <h2 class="hero-title">OUR WEDDING</h2>
+
+            <div class="hero-gallery">
+                <div class="decor-hi">
+                    <img src="decor/chu_hi.png" alt="Hỷ">
+                    <img src="decor/trai_tim1.png" alt="Decor" class="decor-flower">
+                </div>
+
+                <!-- Card Cô Dâu -->
+                <div class="person-card bride-card">
+                    <div class="photo-wrapper">
+                        <!-- Đổi link ảnh cô dâu ở đây -->
+                        <img src="images/a1.jpg" alt="Bride" class="main-photo">
+                    </div>
+                    <div class="person-info">
+                        <div class="info-text">
+                            <span class="role">Thứ Nữ</span>
+                            <span class="name">MỸ NHÂN</span>
+                        </div>
+                        <div class="info-graphics">
+                            <img src="decor/co_dau.png" alt="Icon Cô Dâu" class="avatar-icon">
+                            <img src="decor/trai_tim2.png" alt="Heart" class="heart-icon">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Chú Rể -->
+                <div class="person-card groom-card">
+                    <div class="photo-wrapper">
+                        <!-- Đổi link ảnh chú rể ở đây -->
+                        <img src="images/a1.jpg" alt="Groom" class="main-photo">
+                    </div>
+                    <div class="person-info">
+                        <div class="info-graphics">
+                            <img src="decor/chu_re.png" alt="Icon Chú Rể" class="avatar-icon">
+                        </div>
+                        <div class="info-text">
+                            <span class="role">Trưởng Nam</span>
+                            <span class="name">TRƯỜNG VŨ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN THÔNG TIN LỄ CƯỚI -->
+        <section class="info-section">
+            <h2 class="section-title">THÔNG TIN LỄ CƯỚI</h2>
+
+            <div class="parents-info">
+                <div class="family">
+                    <span class="title">Ông Bà</span>
+                    <span class="name">Lê Văn Bình</span>
+                    <span class="name">Trần Thị Hằng</span>
+                    <span class="address">TP. Tam Kỳ,<br>Quảng Nam</span>
+                </div>
+
+                <div class="divider-vertical"></div>
+
+                <div class="family">
+                    <span class="title">Ông Bà</span>
+                    <span class="name">Nguyễn Văn Lợi</span>
+                    <span class="name">Vũ Thị Thanh</span>
+                    <span class="address">TP. Hội An,<br>Quảng Nam</span>
+                </div>
+            </div>
+
+            <div class="invite-msg">
+                <p>TRÂN TRỌNG BÁO TIN</p>
+                <p>LỄ THÀNH HÔN CỦA CON CHÚNG TÔI</p>
+            </div>
+
+            <div class="couple-names-full">
+                <div class="person">
+                    <span class="full-name">Trường Vũ</span>
+                    <span class="role">TRƯỞNG NAM</span>
+                </div>
+                <div class="ampersand">&</div>
+                <div class="person">
+                    <span class="full-name">Mỹ Nhân</span>
+                    <span class="role">THỨ NỮ</span>
+                </div>
+            </div>
+
+            <div class="event-details">
+                <p class="event-title">LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI TƯ GIA</p>
+                <p class="event-time-label">VÀO LÚC</p>
+                <p class="event-time">09:00</p>
+
+                <div class="event-date">
+                    <span>CHỦ NHẬT</span>
+                    <span class="date-sep">|</span>
+                    <span class="date-day">02</span>
+                    <span class="date-sep">|</span>
+                    <span>THÁNG 08</span>
+                </div>
+
+                <p class="event-year">2026</p>
+                <p class="event-lunar">(Tức ngày 20/06 năm Bính Ngọ)</p>
+            </div>
+
+            <div class="love-decor">Love</div>
+        </section>
+
+        <!-- PHẦN ALBUM ẢNH CƯỚI -->
+        <section class="album-section">
+            <h2 class="section-title">ALBUM ẢNH CƯỚI</h2>
+
+            <div class="album-decor-tr">
+                <img src="decor/trai_tim2.png" alt="decor">
+                <img src="decor/trai_tim3.png" alt="decor" style="width: 25px; margin-left: 5px;">
+            </div>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper album-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="album/a1.jpg" alt="Album 1"></div>
+                    <div class="swiper-slide"><img src="album/a2.jpg" alt="Album 2"></div>
+                    <div class="swiper-slide"><img src="album/a3.jpg" alt="Album 3"></div>
+                    <div class="swiper-slide"><img src="album/a4.jpg" alt="Album 4"></div>
+                    <div class="swiper-slide"><img src="album/a5.jpg" alt="Album 5"></div>
+                    <div class="swiper-slide"><img src="album/a6.jpg" alt="Album 6"></div>
+                    <div class="swiper-slide"><img src="album/a7.jpg" alt="Album 7"></div>
+                </div>
+
+                <!-- Nút điều hướng -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="album-pagination">
+                <span id="current-slide">1</span> / 7
+            </div>
+        </section>
+
+        <!-- PHẦN THÔNG TIN TIỆC CƯỚI -->
+        <section class="party-section">
+            <h2 class="section-title">THÔNG TIN TIỆC CƯỚI</h2>
+
+            <p class="party-subtitle">TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:</p>
+            <p class="event-time">18:00</p>
+
+            <div class="event-date">
+                <span class="date-text">CHỦ NHẬT</span>
+                <span class="date-sep">|</span>
+                <span class="date-day">02</span>
+                <span class="date-sep">|</span>
+                <span class="date-text">THÁNG 08</span>
+            </div>
+
+            <p class="event-year-black">2026</p>
+            <p class="event-lunar-uppercase">(TỨC NGÀY 20/06 NĂM BÍNH NGỌ)</p>
+
+            <div class="timeline">
+                <div class="time-block">
+                    <span class="time-label">ĐÓN KHÁCH</span>
+                    <span class="time-value">17:30</span>
+                </div>
+                <div class="time-block">
+                    <span class="time-label">KHAI TIỆC</span>
+                    <span class="time-value">18:00</span>
+                </div>
+            </div>
+
+            <div class="countdown-container">
+                <p class="countdown-title">CÙNG ĐẾM NGƯỢC</p>
+                <div id="countdown" class="countdown-timer">
+                    Đang tính toán...
+                </div>
+            </div>
+
+            <!-- CSS Calendar tự vẽ -->
+            <div class="calendar-wrapper">
+                <div class="spirals">
+                    <div class="spiral"></div>
+                    <div class="spiral"></div>
+                    <div class="spiral"></div>
+                    <div class="spiral"></div>
+                    <div class="spiral"></div>
+                    <div class="spiral"></div>
+                </div>
+                <div class="calendar-card">
+                    <div class="cal-month">Tháng 8 / 2026</div>
+                    <div class="cal-grid cal-header">
+                        <span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span>
+                    </div>
+                    <div class="cal-grid cal-days">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span>1</span><span
+                            class="cal-highlight">2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+                        <span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+                        <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+                        <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
+                        <span>31</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN ĐỊA ĐIỂM -->
+        <section class="location-section">
+            <h2 class="section-title">TIỆC CƯỚI SẼ TỔ CHỨC TẠI</h2>
+            <p class="location-address">Trung tâm Tiệc cưới Hoàng Gia, Số 1, Đường Trần Phú, TP. Tam Kỳ, Quảng Nam</p>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1565405.006963283!2d107.03975765!3d15.576086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3169f9a463c6c065%3A0x6b9763cbef14cf30!2sQu%E1%BA%A3ng%20Nam%2C%20Vietnam!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- PHẦN LỊCH TRÌNH -->
+        <section class="schedule-section">
+            <h2 class="section-title">LỊCH TRÌNH NGÀY CƯỚI</h2>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                    <!-- Ảnh decor cô dâu đứng cạnh lịch trình -->
+                    <img src="decor/co_dau.png" class="timeline-decor decor-left-1" alt="decor">
+                    <div class="timeline-time">17:30</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">Đón khách</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:30</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">Khai tiệc</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:45</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">Rót rượu, cắt bánh</div>
+                </div>
+
+                <div class="timeline-item">
+                    <!-- Ảnh decor chú rể -->
+                    <img src="decor/chu_re.png" class="timeline-decor decor-left-2" alt="decor">
+                    <div class="timeline-time">19:00</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">Phục vụ món chính</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">Kết thúc tiệc</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN PHONG BAO & LỜI CẢM ƠN -->
+        <section class="thanks-section">
+            <h2 class="section-title text-black">PHONG BAO MỪNG CƯỚI</h2>
+
+            <div class="envelope-wrapper" id="open-qr-btn">
+                <div class="envelope">
+                    <div class="env-corner env-top-left"></div>
+                    <div class="env-corner env-top-right"></div>
+                    <div class="env-corner env-bottom-left"></div>
+                    <div class="env-corner env-bottom-right"></div>
+                    <div class="envelope-seal">囍</div>
+                </div>
+                <!-- Tiền vàng rơi lơ lửng -->
+                <div class="coins">
+                    <div class="coin c1"></div>
+                    <div class="coin c2"></div>
+                    <div class="coin c3"></div>
+                    <div class="coin c4"></div>
+                    <div class="coin c5"></div>
+                </div>
+            </div>
+
+            <p class="envelope-hint">Nhấn để mở</p>
+
+            <div class="thanks-text">
+                <h3 class="thanks-title">Thanks</h3>
+                <p>Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!</p>
+            </div>
+
+            <div class="footer-names">
+                Trường Vũ & Mỹ Nhân
+            </div>
+        </section>
+    </div>
+
+    <!-- Lightbox Modal (Phóng to ảnh) -->
+    <div id="lightbox" class="lightbox hidden">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-prev">&#10094;</button>
+        <img id="lightbox-img" src="" alt="Phóng to ảnh">
+        <button class="lightbox-next">&#10095;</button>
+    </div>
+
+    <!-- Modal Mã QR (Phong bao mừng cưới) -->
+    <div id="qr-modal" class="lightbox hidden">
+        <span class="qr-close">&times;</span>
+        <div class="qr-container">
+            <h3 class="qr-title">GỬI LỜI CHÚC & QUÀ TẶNG</h3>
+            <div class="qr-cards">
+                <div class="qr-card">
+                    <h4>Đến Chú Rể</h4>
+                    <!-- Dùng ảnh QR Placeholder -->
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ChuyenKhoanChuRe"
+                        alt="QR Chú Rể">
+                    <p>Ngân hàng Vietcombank</p>
+                    <p style="font-weight: 700; color: #ce272c; font-size: 20px;">TRƯỜNG VŨ</p>
+                    <p>123456789</p>
+                </div>
+                <div class="qr-card">
+                    <h4>Đến Cô Dâu</h4>
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=ChuyenKhoanCoDau"
+                        alt="QR Cô Dâu">
+                    <p>Ngân hàng MB Bank</p>
+                    <p style="font-weight: 700; color: #ce272c; font-size: 20px;">MỸ NHÂN</p>
+                    <p>987654321</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nền nhạc (Background Music) -->
+    <audio id="bg-music" loop>
+        <source src="mp3/váy-cưới--lyrics-video--from-the-wedding-of-ms-vien-vibi-and-mr-linh.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Nút điều khiển nhạc -->
+    <div id="music-control" class="music-control hidden">
+        <div class="music-icon spinning">🎵</div>
+    </div>
+
+    <!-- Script Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -188,6 +188,17 @@ document.addEventListener('DOMContentLoaded', () => {
             previewInner.style.color = '#d5b882';
             pNames.style.fontFamily = "'Cormorant Garamond', serif";
             pNames.style.fontSize = "3.2rem";
+        } else if (templateId === 'tpl-cute') {
+            previewInner.style.background = 'linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%)';
+            previewInner.style.color = '#fff';
+            pNames.style.fontFamily = "'DynaPuff', cursive";
+            pNames.style.fontSize = "2.8rem";
+            pNames.style.textShadow = "2px 2px 4px rgba(0,0,0,0.2)";
+        } else if (templateId === 'tpl-sangtrong') {
+            previewInner.style.background = 'linear-gradient(135deg, #8B0000 0%, #4A0404 100%)';
+            previewInner.style.color = '#D4AF37';
+            pNames.style.fontFamily = "'Playfair Display', serif";
+            pNames.style.fontSize = "3.2rem";
         }
     }
 

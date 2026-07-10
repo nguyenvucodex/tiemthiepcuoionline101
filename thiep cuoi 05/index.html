@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Cưới Sang Trọng</title>
+    <!-- Google Fonts cho typography sang trọng -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Canvas Hiệu Ứng Bụi Vàng Lấp Lánh -->
+    <canvas id="sparkles-canvas"
+        style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; opacity:1;"></canvas>
+
+    <!-- Màn hình chờ / Cover thiệp -->
+    <div class="hero-section">
+        <!-- Chữ Hỷ lơ lửng mờ ảo làm background -->
+        <div class="floating-hys">
+            <div class="hy-char" style="top: 15%; left: 8%;">囍</div>
+            <div class="hy-char" style="top: 25%; right: 12%; font-size: 1.5rem;">囍</div>
+            <div class="hy-char" style="bottom: 20%; left: 15%; font-size: 1.2rem;">囍</div>
+            <div class="hy-char" style="bottom: 10%; right: 20%;">囍</div>
+        </div>
+
+        <!-- Khung thiệp chính -->
+        <div class="invitation-card">
+            <!-- Lớp họa tiết mờ (Rồng Phượng - Cần add ảnh asset vào đây) -->
+            <div class="card-pattern"></div>
+
+            <div class="card-inner">
+                <!-- Vòng tròn chữ Hỷ phát sáng -->
+                <div class="icon-hy-wrapper">
+                    <div class="icon-glow"></div>
+                    <img src="decor/chu_hi.png" alt="Chữ Hỷ" class="icon-hy-img">
+                </div>
+
+                <!-- Tên cô dâu chú rể -->
+                <div class="couple-names">
+                    <div class="name">Nhật Minh</div>
+                    <div class="ampersand">&</div>
+                    <div class="name">Thu Phương</div>
+                </div>
+
+                <!-- Đường kẻ phân cách -->
+                <div class="divider">
+                    <div class="line"></div>
+                    <div class="leaf-icon">❦</div>
+                    <div class="line"></div>
+                </div>
+
+                <!-- Thời gian -->
+                <div class="wedding-date">12 tháng 7, 2026</div>
+
+                <!-- Lời mời -->
+                <div class="invitation-text">Thân Mời</div>
+
+                <!-- Nút bấm -->
+                <button class="open-btn">Mở thiệp</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nội dung chính của thiệp -->
+    <main class="main-content" style="display: none;">
+        <!-- Họa tiết nền rồng phượng cho toàn trang -->
+        <div class="page-pattern"></div>
+
+        <section class="header-section">
+            <!-- Hàng tên và logo -->
+            <div class="header-top-row">
+                <div class="header-name">NHẬT MINH</div>
+                <div class="header-logo">
+                    <img src="decor/chu_hi.png" alt="Hỷ">
+                </div>
+                <div class="header-name">THU PHƯƠNG</div>
+            </div>
+
+            <!-- Hình ảnh trang trí (chim én - sẽ cần add thêm asset sau) -->
+            <div class="header-decor-birds">
+                <img src="chim_en.png" alt="Chim Én" class="bird-left">
+                <img src="chim_en.png" alt="Chim Én" class="bird-right">
+            </div>
+
+            <!-- Khung ảnh chính -->
+            <div class="main-photo-wrapper">
+                <div class="photo-frame">
+                    <img src="album/a2.jpg" alt="Ảnh Cưới">
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần Thông Tin Lễ Cưới -->
+        <section class="info-section reveal">
+            <div class="info-badge">
+                <span>THÔNG TIN LỄ CƯỚI</span>
+            </div>
+
+            <!-- Gia đình 2 bên -->
+            <div class="parents-row">
+                <div class="family-side">
+                    <div class="title-ob">Ông Bà</div>
+                    <div class="parent-name">Hoàng Đình Trọng</div>
+                    <div class="parent-name">Nguyễn Thị Ngọc</div>
+                    <div class="address">150 Bạch Đằng, Hải Châu, Đà Nẵng</div>
+                </div>
+                <div class="divider-vertical"></div>
+                <div class="family-side">
+                    <div class="title-ob">Ông Bà</div>
+                    <div class="parent-name">Vũ Xuân Tùng</div>
+                    <div class="parent-name">Trần Bích Vân</div>
+                    <div class="address">88 Nguyễn Văn Thoại, Sơn Trà, Đà Nẵng</div>
+                </div>
+            </div>
+
+            <!-- Cô dâu chú rể -->
+            <div class="couple-full-names">
+                <div class="person-full">
+                    <div class="full-name">Hoàng Nhật Minh</div>
+                    <div class="role">ÚT NAM</div>
+                </div>
+                <div class="ampersand">&</div>
+                <div class="person-full">
+                    <div class="full-name">Vũ Thu Phương</div>
+                    <div class="role">TRƯỞNG NỮ</div>
+                </div>
+            </div>
+
+            <!-- Thời gian địa điểm -->
+            <div class="event-details">
+                <div class="event-line">LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI</div>
+                <div class="event-location">TƯ GIA</div>
+                <div class="event-time">VÀO LÚC 09:00</div>
+
+                <div class="event-date-row">
+                    <span class="day-text">CHỦ NHẬT</span>
+                    <span class="date-sep">|</span>
+                    <span class="date-number">12</span>
+                    <span class="date-sep">|</span>
+                    <span class="month-text">THÁNG 07</span>
+                </div>
+
+                <div class="event-year">2026</div>
+                <div class="event-lunar">(Tức ngày 28/05 năm Bính Ngọ)</div>
+            </div>
+        </section>
+
+        <!-- Phần Album Ảnh Cưới -->
+        <section class="album-section reveal">
+            <div class="info-badge">
+                <span>ALBUM ẢNH CƯỚI</span>
+            </div>
+
+            <div class="swiper album-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Mình lấy 7 ảnh mẫu từ thư mục album -->
+                    <div class="swiper-slide"><img src="album/a1.jpg" alt="Album 1"></div>
+                    <div class="swiper-slide"><img src="album/a2.jpg" alt="Album 2"></div>
+                    <div class="swiper-slide"><img src="album/a3.jpg" alt="Album 3"></div>
+                    <div class="swiper-slide"><img src="album/a4.jpg" alt="Album 4"></div>
+                    <div class="swiper-slide"><img src="album/a5.jpg" alt="Album 5"></div>
+                    <div class="swiper-slide"><img src="album/a6.jpg" alt="Album 6"></div>
+                    <div class="swiper-slide"><img src="album/a7.jpg" alt="Album 7"></div>
+                </div>
+
+                <!-- Nút điều hướng -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <!-- Phần Tiệc Cưới & Lịch -->
+        <section class="party-section reveal">
+            <div class="party-title">TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:</div>
+            <div class="party-time">18:00</div>
+
+            <div class="event-date-row">
+                <span class="day-text">CHỦ NHẬT</span>
+                <span class="date-sep">|</span>
+                <span class="date-number">12</span>
+                <span class="date-sep">|</span>
+                <span class="month-text">THÁNG 07</span>
+            </div>
+
+            <div class="event-lunar">(Tức ngày 28/05 năm Bính Ngọ)</div>
+
+            <div class="timeline-row">
+                <div class="timeline-item">
+                    <div class="tl-label">ĐÓN KHÁCH</div>
+                    <div class="tl-time">17:30</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="tl-label">KHAI TIỆC</div>
+                    <div class="tl-time">18:00</div>
+                </div>
+            </div>
+
+            <div class="countdown-title">CÙNG ĐẾM NGƯỢC</div>
+            <div class="countdown-timer" id="countdown">
+                Đang tải...
+            </div>
+
+            <!-- Khung Lịch -->
+            <div class="calendar-wrapper">
+                <!-- 4 Góc hoa văn truyền thống -->
+                <svg class="cal-corner corner-tl" viewBox="0 0 30 30">
+                    <rect width="30" height="30" fill="var(--bg-main)" />
+                    <path d="M 0,30 V 8 H 8 V 0 H 30 M 8,20 V 8 H 20" fill="none" stroke="var(--text-gold)"
+                        stroke-width="1.5" />
+                </svg>
+                <svg class="cal-corner corner-tr" viewBox="0 0 30 30">
+                    <rect width="30" height="30" fill="var(--bg-main)" />
+                    <path d="M 0,30 V 8 H 8 V 0 H 30 M 8,20 V 8 H 20" fill="none" stroke="var(--text-gold)"
+                        stroke-width="1.5" />
+                </svg>
+                <svg class="cal-corner corner-bl" viewBox="0 0 30 30">
+                    <rect width="30" height="30" fill="var(--bg-main)" />
+                    <path d="M 0,30 V 8 H 8 V 0 H 30 M 8,20 V 8 H 20" fill="none" stroke="var(--text-gold)"
+                        stroke-width="1.5" />
+                </svg>
+                <svg class="cal-corner corner-br" viewBox="0 0 30 30">
+                    <rect width="30" height="30" fill="var(--bg-main)" />
+                    <path d="M 0,30 V 8 H 8 V 0 H 30 M 8,20 V 8 H 20" fill="none" stroke="var(--text-gold)"
+                        stroke-width="1.5" />
+                </svg>
+
+                <div class="calendar-month">Tháng 7 / 2026</div>
+                <div class="calendar-grid">
+                    <div class="cal-header">T2</div>
+                    <div class="cal-header">T3</div>
+                    <div class="cal-header">T4</div>
+                    <div class="cal-header">T5</div>
+                    <div class="cal-header">T6</div>
+                    <div class="cal-header">T7</div>
+                    <div class="cal-header">CN</div>
+
+                    <!-- 1/7/2026 là Thứ 4 (T4) -->
+                    <div class="cal-day empty"></div>
+                    <div class="cal-day empty"></div>
+
+                    <div class="cal-day">1</div>
+                    <div class="cal-day">2</div>
+                    <div class="cal-day">3</div>
+                    <div class="cal-day">4</div>
+                    <div class="cal-day">5</div>
+                    <div class="cal-day">6</div>
+                    <div class="cal-day">7</div>
+                    <div class="cal-day">8</div>
+                    <div class="cal-day">9</div>
+                    <div class="cal-day">10</div>
+                    <div class="cal-day">11</div>
+                    <div class="cal-day highlight">
+                        <img src="decor/trai_tim1.png" alt="heart" class="heart-bg">
+                        <span>12</span>
+                    </div>
+                    <div class="cal-day">13</div>
+                    <div class="cal-day">14</div>
+                    <div class="cal-day">15</div>
+                    <div class="cal-day">16</div>
+                    <div class="cal-day">17</div>
+                    <div class="cal-day">18</div>
+                    <div class="cal-day">19</div>
+                    <div class="cal-day">20</div>
+                    <div class="cal-day">21</div>
+                    <div class="cal-day">22</div>
+                    <div class="cal-day">23</div>
+                    <div class="cal-day">24</div>
+                    <div class="cal-day">25</div>
+                    <div class="cal-day">26</div>
+                    <div class="cal-day">27</div>
+                    <div class="cal-day">28</div>
+                    <div class="cal-day">29</div>
+                    <div class="cal-day">30</div>
+                    <div class="cal-day">31</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần Lịch Trình -->
+        <section class="schedule-section reveal">
+            <div class="schedule-title">LỊCH TRÌNH NGÀY CƯỚI</div>
+
+            <div class="schedule-container">
+                <!-- Chim én trang trí -->
+                <img src="chim_en.png" alt="Chim én" class="schedule-bird bird-1">
+                <img src="chim_en.png" alt="Chim én" class="schedule-bird bird-2">
+
+                <div class="schedule-line"></div>
+
+                <div class="schedule-item">
+                    <div class="sc-time">17:30</div>
+                    <div class="sc-dot"></div>
+                    <div class="sc-event">Đón khách</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="sc-time">18:30</div>
+                    <div class="sc-dot"></div>
+                    <div class="sc-event">Khai tiệc</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="sc-time">18:45</div>
+                    <div class="sc-dot"></div>
+                    <div class="sc-event">Rót rượu, cắt bánh</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="sc-time">19:00</div>
+                    <div class="sc-dot"></div>
+                    <div class="sc-event">Phục vụ món chính</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="sc-time">21:00</div>
+                    <div class="sc-dot"></div>
+                    <div class="sc-event">Kết thúc tiệc</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần Bản Đồ -->
+        <section class="map-section reveal">
+            <div class="info-badge">
+                <span>TIỆC CƯỚI SẼ TỔ CHỨC TẠI</span>
+            </div>
+
+            <div class="map-address">
+                For You Palace, Công Viên Trung Tâm, Đường 2/9, Hải Châu, Đà Nẵng
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://maps.google.com/maps?q=For%20You%20Palace%20%C4%90%C3%A0%20N%E1%BA%B5ng&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- Phần Phong Bao Mừng Cưới -->
+        <section class="gift-section reveal">
+            <h2 class="schedule-title">PHONG BAO MỪNG CƯỚI</h2>
+
+            <div class="envelope-wrapper" onclick="openGiftModal()">
+                <!-- Các đồng tiền vàng bay lơ lửng -->
+                <div class="coin" style="top: 20px; left: -30px; transform: scale(1.2);"></div>
+                <div class="coin" style="top: 100px; right: -40px; transform: scale(1.5);"></div>
+                <div class="coin" style="bottom: 40px; right: -20px;"></div>
+                <div class="coin" style="bottom: 10px; left: -15px; transform: scale(0.8);"></div>
+                <div class="coin" style="top: -10px; right: 10px; transform: scale(0.9);"></div>
+
+                <div class="envelope">
+                    <div class="env-corner tl"></div>
+                    <div class="env-corner tr"></div>
+                    <div class="env-corner bl"></div>
+                    <div class="env-corner br"></div>
+
+                    <div class="env-center">
+                        <span>囍</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gift-click-text">Nhấn để mở</div>
+
+            <div class="footer-thanks">
+                Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!
+            </div>
+        </section>
+    </main>
+
+    <!-- Nhạc nền -->
+    <audio id="bg-music" loop>
+        <source src="mp3/váy-cưới--lyrics-video--from-the-wedding-of-ms-vien-vibi-and-mr-linh.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Nút điều khiển nhạc -->
+    <div id="music-control" class="music-control paused">
+        <svg viewBox="0 0 24 24" class="icon-music">
+            <path fill="currentColor"
+                d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+        </svg>
+    </div>
+
+    <!-- Hộp thoại Modal Phong Bao -->
+    <div id="gift-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeGiftModal()">&times;</span>
+            <h3 class="modal-title">GỬI GẮM YÊU THƯƠNG</h3>
+            <p class="modal-desc">Cảm ơn bạn rất nhiều vì đã gửi những lời chúc tốt đẹp nhất đến đám cưới của chúng tôi!
+            </p>
+
+            <div class="bank-container">
+                <div class="bank-card">
+                    <div class="bank-name">NGÂN HÀNG CHÚ RỂ</div>
+                    <img class="bank-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=1234567890"
+                        alt="QR Chú Rể">
+                    <div class="bank-user">Hoàng Nhật Minh</div>
+                    <div class="bank-number">1234567890</div>
+                    <button class="copy-btn" onclick="copyText('1234567890')">Sao Chép Số TK</button>
+                </div>
+                <div class="bank-card">
+                    <div class="bank-name">NGÂN HÀNG CÔ DÂU</div>
+                    <img class="bank-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0987654321"
+                        alt="QR Cô Dâu">
+                    <div class="bank-user">Vũ Thu Phương</div>
+                    <div class="bank-number">0987654321</div>
+                    <button class="copy-btn" onclick="copyText('0987654321')">Sao Chép Số TK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hộp thoại phóng to ảnh (Lightbox) -->
+    <div id="lightbox" class="lightbox hidden">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-prev">&#10094;</button>
+        <img id="lightbox-img" src="" alt="Zoomed Image">
+        <button class="lightbox-next">&#10095;</button>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Canvas Confetti JS (Hiệu ứng pháo hoa) -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Script xử lý mở thiệp và Slider -->
+    <script>
+        // Init Swiper 3D Coverflow
+        const albumSwiper = new Swiper('.album-swiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 300,
+                modifier: 1,
+                slideShadows: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            initialSlide: 1 // Start at image a2.jpg to match design
+        });
+
+        // -------------------------
+        // XỬ LÝ PHÓNG TO ẢNH (LIGHTBOX)
+        // -------------------------
+        const albumImages = [
+            'album/a1.jpg', 'album/a2.jpg', 'album/a3.jpg',
+            'album/a4.jpg', 'album/a5.jpg', 'album/a6.jpg', 'album/a7.jpg'
+        ];
+        let currentLightboxIndex = 0;
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const btnClose = document.querySelector('.lightbox-close');
+        const btnPrev = document.querySelector('.lightbox-prev');
+        const btnNext = document.querySelector('.lightbox-next');
+
+        // Sự kiện click vào ảnh trong slider
+        document.querySelectorAll('.album-swiper .swiper-slide img').forEach(img => {
+            img.style.cursor = 'pointer'; // Thêm con trỏ báo hiệu có thể click
+            img.addEventListener('click', function () {
+                const src = this.getAttribute('src');
+                currentLightboxIndex = albumImages.indexOf(src);
+                if (currentLightboxIndex === -1) currentLightboxIndex = 0;
+
+                lightboxImg.src = src;
+                lightbox.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Ngăn cuộn trang web
+            });
+        });
+
+        function updateLightboxImage() {
+            lightboxImg.src = albumImages[currentLightboxIndex];
+        }
+
+        btnClose.addEventListener('click', () => {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        btnPrev.addEventListener('click', () => {
+            currentLightboxIndex = (currentLightboxIndex - 1 + albumImages.length) % albumImages.length;
+            updateLightboxImage();
+        });
+
+        btnNext.addEventListener('click', () => {
+            currentLightboxIndex = (currentLightboxIndex + 1) % albumImages.length;
+            updateLightboxImage();
+        });
+
+        // Click ra ngoài ảnh để đóng
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                btnClose.click();
+            }
+        });
+
+        // -------------------------
+        // XỬ LÝ ĐẾM NGƯỢC (COUNTDOWN)
+        // -------------------------
+        const weddingDate = new Date('2026-07-12T09:00:00').getTime();
+        const countdownEl = document.getElementById('countdown');
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                countdownEl.innerHTML = "Lễ cưới đang diễn ra!";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownEl.innerHTML = `${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây`;
+        }, 1000);
+
+        // -------------------------
+        // XỬ LÝ MỞ THIỆP
+        // -------------------------
+        document.querySelector('.open-btn').addEventListener('click', function () {
+            // 1. Hiệu ứng pháo hoa bằng canvas-confetti
+            var count = 200;
+            var defaults = {
+                origin: { y: 0.7 },
+                zIndex: 100000,
+                colors: ['#e5b985', '#c31f26', '#f6d17b', '#ffffff']
+            };
+
+            function fire(particleRatio, opts) {
+                confetti(Object.assign({}, defaults, opts, {
+                    particleCount: Math.floor(count * particleRatio)
+                }));
+            }
+
+            fire(0.25, { spread: 26, startVelocity: 55 });
+            fire(0.2, { spread: 60 });
+            fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+            fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+            fire(0.1, { spread: 120, startVelocity: 45 });
+
+            // 2. Phát nhạc nền
+            const bgMusic = document.getElementById('bg-music');
+            if (bgMusic) {
+                bgMusic.play().catch(e => console.log('Auto-play bị chặn bởi trình duyệt'));
+                document.getElementById('music-control').classList.remove('paused');
+                document.getElementById('music-control').classList.add('playing');
+            }
+
+            // 3. Chuyển đổi màn hình
+            const hero = document.querySelector('.hero-section');
+            const mainContent = document.querySelector('.main-content');
+
+            // Thêm hiệu ứng mờ dần và trượt lên cho màn hình chờ
+            hero.style.transition = 'opacity 1s ease, transform 1s ease';
+            hero.style.opacity = '0';
+            hero.style.transform = 'translateY(-50px)';
+            hero.style.pointerEvents = 'none';
+
+            // Sau 1s (khi transition xong) thì ẩn hẳn màn hình chờ và hiện màn hình chính
+            setTimeout(() => {
+                hero.style.display = 'none';
+                mainContent.style.display = 'block';
+                // Reset scroll về đầu trang
+                window.scrollTo(0, 0);
+            }, 1000);
+        });
+
+        // -------------------------
+        // XỬ LÝ MODAL PHONG BAO
+        // -------------------------
+        function openGiftModal() {
+            document.getElementById('gift-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGiftModal() {
+            document.getElementById('gift-modal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text);
+            alert("Đã sao chép số tài khoản: " + text);
+        }
+
+        // Click ra ngoài để đóng modal phong bao
+        document.getElementById('gift-modal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeGiftModal();
+            }
+        });
+
+        // -------------------------
+        // XỬ LÝ BẬT/TẮT NHẠC
+        // -------------------------
+        const musicControl = document.getElementById('music-control');
+        const bgMusic = document.getElementById('bg-music');
+
+        musicControl.addEventListener('click', function () {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                musicControl.classList.remove('paused');
+                musicControl.classList.add('playing');
+            } else {
+                bgMusic.pause();
+                musicControl.classList.remove('playing');
+                musicControl.classList.add('paused');
+            }
+        });
+
+        // -------------------------
+        // HIỆU ỨNG TRƯỢT KHI CUỘN TRANG (SCROLL REVEAL)
+        // -------------------------
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal();
+
+        // -------------------------
+        // HIỆU ỨNG RƠI LẤP LÁNH (GOLD SPARKS)
+        // -------------------------
+        const canvas = document.getElementById('sparkles-canvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        let particles = [];
+        const particleCount = 40; // Số lượng hạt lấp lánh
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 2 + 0.5; // Hạt nhỏ li ti
+                this.speedY = Math.random() * 1 + 0.5; // Rơi chậm
+                this.speedX = (Math.random() - 0.5) * 0.5; // Bay lượn ngang
+                this.opacity = Math.random() * 0.5 + 0.3;
+                this.glow = Math.random() * 0.02 + 0.01; // Đổi sáng tối
+                this.glowDir = Math.random() > 0.5 ? 1 : -1;
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+
+                // Lấp lánh
+                this.opacity += this.glow * this.glowDir;
+                if (this.opacity >= 1 || this.opacity <= 0.1) {
+                    this.glowDir *= -1;
+                }
+
+                // Rơi qua màn hình thì quay lại trên đỉnh
+                if (this.y > height) {
+                    this.y = -10;
+                    this.x = Math.random() * width;
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(246, 209, 123, ${this.opacity})`; // Màu vàng Gold (#f6d17b)
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = "rgba(246, 209, 123, 1)";
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+            requestAnimationFrame(animateParticles);
+        }
+
+        initParticles();
+        animateParticles();
+    </script>
+</body>
+
+</html>
