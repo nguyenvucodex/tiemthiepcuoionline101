@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2d1d13">
+  <title>Thiệp cưới hihi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=Dancing+Script:wght@600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+  <main class="opening" id="opening">
+    <section class="invitation-card" aria-labelledby="couple-name">
+      <h1 class="couple" id="couple-name">
+        <span>Thế Bảo</span>
+        <small>&amp;</small>
+        <span>Ngọc Ánh</span>
+      </h1>
+
+      <div class="ornament" aria-hidden="true"><span></span><b>❦</b><span></span></div>
+      <time class="wedding-date" datetime="2026-05-03">3 tháng 5, 2026</time>
+
+      <p class="invite-label">Thân Mời</p>
+      <p class="guest-name">Quý khách</p>
+      <p class="invite-copy">Dự tiệc chung vui cùng chúng tôi</p>
+
+      <button class="open-button" id="openInvitation" type="button">
+        <span>Mở thiệp</span>
+        <span class="button-arrow" aria-hidden="true">→</span>
+      </button>
+    </section>
+  </main>
+
+  <section class="main-invitation" id="mainInvitation" aria-hidden="true">
+    <div class="first-scene" aria-labelledby="first-scene-title">
+      <img class="scene-branch" src="decor/nhanhhoa.png" alt="" aria-hidden="true">
+      <img class="scene-lantern" src="decor/longden.png" alt="" aria-hidden="true">
+
+      <p class="scene-couple-name" id="first-scene-title">Thế Bảo &amp; Ngọc Ánh</p>
+
+      <div class="scene-center" aria-hidden="true">
+        <img class="scene-happiness" src="decor/chuhi.png" alt="">
+        <img class="scene-cloud scene-cloud-top" src="decor/dammay.png" alt="">
+        <img class="scene-fan scene-fan-left" src="decor/quat.png" alt="">
+        <img class="scene-fan scene-fan-right" src="decor/quat.png" alt="">
+        <img class="scene-flower" src="decor/hoa.png" alt="">
+        <img class="scene-couple-figure" src="decor/codau_chure.png" alt="">
+      </div>
+
+      <p class="scene-slogan" aria-label="Nhà có hỷ">
+        <span>NHÀ</span>
+        <span>CÓ</span>
+        <span>HỶ</span>
+      </p>
+    </div>
+
+    <section class="wedding-info" aria-labelledby="wedding-info-title">
+      <div class="corner corner-top-left" aria-hidden="true"></div>
+      <div class="corner corner-top-right" aria-hidden="true"></div>
+      <div class="corner corner-bottom-left" aria-hidden="true"></div>
+      <div class="corner corner-bottom-right" aria-hidden="true"></div>
+
+      <img class="info-cloud info-cloud-left" src="decor/dammay.png" alt="" aria-hidden="true">
+      <img class="info-cloud info-cloud-center" src="decor/dammay.png" alt="" aria-hidden="true">
+      <img class="info-cloud info-cloud-bottom" src="decor/dammay.png" alt="" aria-hidden="true">
+
+      <h2 class="info-title" id="wedding-info-title">THÔNG TIN LỄ CƯỚI</h2>
+
+      <div class="family-grid">
+        <div class="family-card">
+          <p>Ông Bà</p>
+          <strong>Nguyễn Gia Minh</strong>
+          <strong>Lê Thị Hương</strong>
+          <span>123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+        </div>
+        <div class="family-card">
+          <p>Ông Bà</p>
+          <strong>Phan Văn Tài</strong>
+          <strong>Phạm Thị Kim Oanh</strong>
+          <span>456 Lê Lợi, Quận 3, TP. Hồ Chí Minh</span>
+        </div>
+      </div>
+
+      <div class="couple-info">
+        <h3>NGUYỄN THẾ BẢO</h3>
+        <p>TRƯỞNG NAM</p>
+        <span>&amp;</span>
+        <h3>PHAN NGỌC ÁNH</h3>
+        <p>ÚT NỮ</p>
+      </div>
+
+      <div class="ceremony-info">
+        <p>LỄ THÀNH HÔN ĐƯỢC CỬ HÀNH TẠI TƯ GIA</p>
+        <strong>VÀO LÚC</strong>
+        <time datetime="2026-05-03T09:00">09:00</time>
+        <div class="date-row">
+          <span>CHỦ NHẬT</span>
+          <b>03</b>
+          <span>THÁNG 05</span>
+        </div>
+        <strong>2026</strong>
+        <small>(Tức ngày 17/03 năm Bính Ngọ)</small>
+      </div>
+    </section>
+
+    <section class="album-section" aria-labelledby="album-title">
+      <img class="album-cloud album-cloud-top" src="decor/dammay.png" alt="" aria-hidden="true">
+      <img class="album-cloud album-cloud-bottom" src="decor/dammay.png" alt="" aria-hidden="true">
+
+      <h2 class="album-title" id="album-title">ALBUM ẢNH CƯỚI</h2>
+
+      <div class="album-grid">
+        <button class="album-item" type="button" data-album-index="0" aria-label="Xem ảnh cưới 1">
+          <img src="album/a1.jpg" alt="Ảnh cưới Thế Bảo và Ngọc Ánh 1">
+        </button>
+        <button class="album-item" type="button" data-album-index="1" aria-label="Xem ảnh cưới 2">
+          <img src="album/a2.jpg" alt="Ảnh cưới Thế Bảo và Ngọc Ánh 2">
+        </button>
+        <button class="album-item" type="button" data-album-index="2" aria-label="Xem ảnh cưới 3">
+          <img src="album/a3.jpg" alt="Ảnh cưới Thế Bảo và Ngọc Ánh 3">
+        </button>
+        <button class="album-item album-more" type="button" data-album-index="3" aria-label="Xem thêm ảnh cưới">
+          <img src="album/a4.jpg" alt="Ảnh cưới Thế Bảo và Ngọc Ánh 4">
+          <span>+4</span>
+        </button>
+      </div>
+    </section>
+
+
+    <section class="party-info" aria-labelledby="party-info-title">
+      <div class="corner corner-top-left" aria-hidden="true"></div>
+      <div class="corner corner-top-right" aria-hidden="true"></div>
+      <div class="corner corner-bottom-left" aria-hidden="true"></div>
+      <div class="corner corner-bottom-right" aria-hidden="true"></div>
+
+      <img class="party-cloud party-cloud-top" src="decor/dammay.png" alt="" aria-hidden="true">
+      <img class="party-cloud party-cloud-bottom" src="decor/dammay.png" alt="" aria-hidden="true">
+
+      <h2 class="party-title" id="party-info-title">THÔNG TIN TIỆC CƯỚI</h2>
+
+      <div class="party-main">
+        <p class="party-lead">TIỆC CƯỚI SẼ DIỄN RA VÀO LÚC:</p>
+        <time class="party-time" datetime="2026-05-03T18:00">18:00</time>
+
+        <div class="party-date-row">
+          <span>CHỦ NHẬT</span>
+          <b>03</b>
+          <span>THÁNG 05</span>
+        </div>
+        <strong class="party-year">2026</strong>
+        <small class="party-lunar">(TỨC NGÀY 17/03 NĂM BÍNH NGỌ)</small>
+
+        <div class="party-schedule">
+          <div>
+            <span>ĐÓN KHÁCH</span>
+            <strong>17:30</strong>
+          </div>
+          <div>
+            <span>KHAI TIỆC</span>
+            <strong>18:00</strong>
+          </div>
+        </div>
+
+        <div class="mini-calendar" aria-label="Lịch tháng 5 năm 2026">
+          <div class="calendar-caption">Tháng 5 / 2026</div>
+          <div class="calendar-weekdays">
+            <span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span>
+          </div>
+          <div class="calendar-days">
+            <span></span><span></span><span></span><span></span><span>1</span><span>2</span><span
+              class="active-day">3</span>
+            <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+            <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
+            <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+            <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+          </div>
+        </div>
+
+        <a class="calendar-link"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Ti%E1%BB%87c%20c%C6%B0%E1%BB%9Bi%20Th%E1%BA%BF%20B%E1%BA%A3o%20%26%20Ng%E1%BB%8Dc%20%C3%81nh&dates=20260503T110000Z/20260503T140000Z&details=Ti%E1%BB%87c%20c%C6%B0%E1%BB%9Bi%20s%E1%BA%BD%20di%E1%BB%85n%20ra%20v%C3%A0o%20l%C3%BAc%2018%3A00"
+          target="_blank" rel="noreferrer">Thêm vào lịch</a>
+        <button class="rsvp-button" type="button">XÁC NHẬN THAM DỰ</button>
+      </div>
+    </section>
+
+    <section class="venue-schedule" aria-labelledby="venue-title">
+      <img class="venue-cloud venue-cloud-top" src="decor/dammay.png" alt="" aria-hidden="true">
+      <img class="venue-cloud venue-cloud-bottom" src="decor/dammay.png" alt="" aria-hidden="true">
+
+      <div class="venue-block">
+        <h2 class="venue-title" id="venue-title">TIỆC CƯỚI SẼ TỔ CHỨC TẠI</h2>
+        <p class="venue-address">White Palace Convention Center, 194 Hoàng Văn Thụ, Phú Nhuận, Hồ Chí Minh</p>
+        <div class="map-frame">
+          <iframe title="Bản đồ White Palace Hoàng Văn Thụ"
+            src="https://www.google.com/maps?q=White%20Palace%20Convention%20Center%20194%20Hoang%20Van%20Thu%20Phu%20Nhuan%20Ho%20Chi%20Minh&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div class="timeline-block" aria-labelledby="timeline-title">
+        <h2 class="timeline-title" id="timeline-title">LỊCH TRÌNH NGÀY CƯỚI</h2>
+        <ol class="wedding-timeline">
+          <li>
+            <time>17:30</time>
+            <span>Đón khách</span>
+          </li>
+          <li>
+            <time>18:30</time>
+            <span>Khai tiệc</span>
+          </li>
+          <li>
+            <time>18:45</time>
+            <span>Rót rượu, cắt bánh</span>
+          </li>
+          <li>
+            <time>19:00</time>
+            <span>Phục vụ món chính</span>
+          </li>
+          <li>
+            <time>21:00</time>
+            <span>Kết thúc tiệc</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="gift-section" aria-labelledby="gift-title">
+      <img class="gift-cloud gift-cloud-top" src="decor/dammay.png" alt="" aria-hidden="true">
+      <img class="gift-cloud gift-cloud-bottom" src="decor/dammay.png" alt="" aria-hidden="true">
+
+      <h2 class="gift-title" id="gift-title">PHONG BAO MỪNG CƯỚI</h2>
+
+      <button class="lucky-envelope" type="button" aria-label="Mở phong bao mừng cưới">
+        <span class="coin coin-one" aria-hidden="true">¥</span>
+        <span class="coin coin-two" aria-hidden="true">¥</span>
+        <span class="coin coin-three" aria-hidden="true">¥</span>
+        <span class="envelope-card" aria-hidden="true">
+          <span class="envelope-corner top-left"></span>
+          <span class="envelope-corner top-right"></span>
+          <span class="envelope-corner bottom-left"></span>
+          <span class="envelope-corner bottom-right"></span>
+          <span class="envelope-seal">囍</span>
+        </span>
+        <small>Nhấn để mở</small>
+      </button>
+
+      <p class="gift-note">Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi!</p>
+    </section>
+
+    <div class="gift-modal" id="giftModal" aria-hidden="true" role="dialog" aria-modal="true"
+      aria-label="Mã QR mừng cưới">
+      <div class="gift-modal-card">
+        <button class="gift-close" type="button" aria-label="Đóng mã QR">×</button>
+        <h3>MỪNG CƯỚI QUA QR</h3>
+        <div class="qr-grid">
+          <article class="qr-card">
+            <div class="qr-placeholder" aria-label="Mã QR ngân hàng chú rể"></div>
+            <strong>Chú rể</strong>
+            <span>Nguyễn Thế Bảo</span>
+          </article>
+          <article class="qr-card">
+            <div class="qr-placeholder qr-alt" aria-label="Mã QR ngân hàng cô dâu"></div>
+            <strong>Cô dâu</strong>
+            <span>Phan Ngọc Ánh</span>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="album-lightbox" id="albumLightbox" aria-hidden="true" role="dialog" aria-modal="true"
+      aria-label="Xem ảnh cưới phóng to">
+      <button class="lightbox-close" type="button" aria-label="Đóng ảnh">×</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Ảnh trước">‹</button>
+      <figure class="lightbox-frame">
+        <img id="lightboxImage" src="album/a1.jpg" alt="Ảnh cưới phóng to">
+        <figcaption id="lightboxCounter">1 / 7</figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Ảnh tiếp theo">›</button>
+    </div>
+  </section>
+
+
+
+  <div class="sparkles-container" id="sparklesContainer" aria-hidden="true"></div>
+  <audio id="bgMusic" loop preload="auto">
+    <source src="mp3/váy-cưới--lyrics-video--from-the-wedding-of-ms-vien-vibi-and-mr-linh.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Phát / Tạm dừng nhạc">
+    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18V5l12-2v13"></path>
+      <circle cx="6" cy="18" r="3"></circle>
+      <circle cx="18" cy="16" r="3"></circle>
+    </svg>
+  </button>
+  <script src="script.js"></script>
+</body>
+
+</html>

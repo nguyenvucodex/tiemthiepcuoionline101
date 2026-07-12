@@ -199,6 +199,12 @@ document.addEventListener('DOMContentLoaded', () => {
             previewInner.style.color = '#D4AF37';
             pNames.style.fontFamily = "'Playfair Display', serif";
             pNames.style.fontSize = "3.2rem";
+        } else if (templateId === 'tpl-nhacohy') {
+            previewInner.style.background = 'linear-gradient(135deg, #8B0000 0%, #4A0404 100%)';
+            previewInner.style.color = '#F9F2E7';
+            pNames.style.fontFamily = "'Be Vietnam Pro', sans-serif";
+            pNames.style.fontWeight = "700";
+            pNames.style.fontSize = "2.8rem";
         }
     }
 
